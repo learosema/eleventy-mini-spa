@@ -64,4 +64,4 @@ I thought it was nice to even also support IE. And throwing ES2020 onto it doesn
 
 ## Demo:
 
-https://terabaud.github.io/mini-spa/
+https://terabaud.github.io/eleventy-mini-spa/
