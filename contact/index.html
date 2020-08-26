@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact
+      –
+      Mini SPA proof of concept</title>
+    <style>
+      body {
+  background: radial-gradient(circle at center, purple, #505);
+  color: #fff;
+  height: 100vh;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 16px auto;
+  max-width: 800px;
+  font-size: 24px;
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: pink;
+}
+
+a {
+  color: #bef;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav__list-item a {
+  color: #fed;
+  text-decoration: none;
+  padding: 16px;
+  margin: 8px 0;
+}
+.nav__list-item a:hover {
+  background: #000;
+}
+
+/*# sourceMappingURL=global.css.map */
+    </style>
+    
+  </head>
+  <body>
+    <nav class="nav" role="navigation">
+  <ul class="nav__list">
+    
+      <li class="nav__list-item">
+        <a href="/" data-spa="main">Home</a>
+      </li>
+    
+      <li class="nav__list-item">
+        <a href="/about" data-spa="main">About</a>
+      </li>
+    
+      <li class="nav__list-item">
+        <a href="/contact" data-spa="main">Contact</a>
+      </li>
+    
+  </ul>
+</nav>
+    <main>
+      
+  <article><h1>Contact</h1>
+<p>You can contact me via twitter: <a href="https://twitter.com/terabaud">@terabaud</a></p>
+</article>
+
+    </main>
+    <script src="/js/mini-spa.js"></script>
+  </body>
+</html>
