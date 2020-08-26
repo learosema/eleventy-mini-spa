@@ -1,5 +1,5 @@
 body {
-  background: radial-gradient(circle at center, purple, #505);
+  background: radial-gradient(circle at center, #405, #202);
   color: #fff;
   height: 100vh;
   margin: 0;
@@ -16,7 +16,7 @@ h3,
 h4,
 h5 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: pink;
+  color: #ecf;
 }
 
 a {
@@ -42,6 +42,13 @@ a {
 }
 .nav__list-item a:hover {
   background: #000;
+}
+
+img {
+  border-radius: 50%;
+  border: 16px solid #fff;
+  -webkit-box-shadow: 0 0 10px 0 #000;
+          box-shadow: 0 0 10px 0 #000;
 }
 
 /*# sourceMappingURL=global.css.map */
