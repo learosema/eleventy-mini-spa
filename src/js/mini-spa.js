@@ -1,26 +1,31 @@
 (function () {
   'use strict';
-
-  const $ = (sel, con = document) => con.querySelector(sel);
-  const navigation = $('.nav');
-  if (!navigation) {
+  var $ = function (sel, con) {
+    return (con || document).querySelector(sel);
+  };
+  var nav = $('.nav');
+  if (!nav) {
     console.warn('no navigation found.');
     return;
   }
-  navigation.addEventListener('click', async (evt) => {
-    const target = evt.target;
-    const spa = evt.target.getAttribute('data-spa');
+  nav.addEventListener('click', function (evt) {
+    var el = evt.target;
+    var spa = el.getAttribute('data-spa');
     if (!!spa) {
       evt.preventDefault();
-      const href = evt.target.getAttribute('href');
-      const container = $(spa);
-      const response = await fetch(href);
-      const html = await response.text();
-      const doc = new DOMParser().parseFromString(html, 'text/html');
-      const docTitle = $('title', doc);
-      const docContainer = $(spa, doc);
-      container.innerHTML = (docContainer && docContainer.innerHTML) || '';
-      history.pushState({}, docTitle && docTitle.textContent, href);
+      var href = el.getAttribute('href');
+      var container = $(spa);
+      var xhr = new XMLHttpRequest();
+      xhr.onload = function () {
+        var d = this.responseXML;
+        var dTitle = d.title || '';
+        var dContainer = $(spa, d);
+        container.innerHTML = (dContainer && dContainer.innerHTML) || '';
+        history.pushState({}, dTitle, href);
+      };
+      xhr.open('GET', href);
+      xhr.responseType = 'document';
+      xhr.send();
     }
   });
 })();
