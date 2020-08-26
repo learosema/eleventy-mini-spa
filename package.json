@@ -1,0 +1,30 @@
+{
+  "name": "mini-spa",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "concurrently": "^5.3.0",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "rollup": "^2.26.5",
+    "sass": "^1.26.10"
+  },
+  "scripts": {
+    "start": "concurrently 'npm:serve:html' 'npm:watch:css'",
+    "build:css": "sass src/scss:.tmp/css && postcss .tmp/css/**/*.css --dir src/_includes/css",
+    "postbuild:css": "rm -rf .tmp",
+    "prewatch:css": "sass src/scss:.tmp/css && postcss .tmp/css/**/*.css --dir src/_includes/css",
+    "watch:css": "concurrently 'sass src/scss/:.tmp/css/ --watch' 'postcss .tmp/css/**/*.css --dir src/_includes/css --watch'",
+    "postwatch:css": "rm -rf .tmp",
+    "build:html": "eleventy",
+    "serve:html": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Lea Rosema",
+  "license": "ISC"
+}

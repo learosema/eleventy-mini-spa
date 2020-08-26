@@ -1,0 +1,47 @@
+body {
+  background: radial-gradient(circle at center, purple, #505);
+  color: #fff;
+  height: 100vh;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 16px auto;
+  max-width: 800px;
+  font-size: 24px;
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: pink;
+}
+
+a {
+  color: #bef;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav__list-item a {
+  color: #fed;
+  text-decoration: none;
+  padding: 16px;
+  margin: 8px 0;
+}
+.nav__list-item a:hover {
+  background: #000;
+}
+
+/*# sourceMappingURL=global.css.map */

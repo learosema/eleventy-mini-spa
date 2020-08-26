@@ -1,0 +1,24 @@
+body {
+  background: radial-gradient(circle at center, $bg-01, $bg-02);
+  color: #fff;
+  height: 100vh;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 16px auto;
+  max-width: 800px;
+  font-size: 24px;
+  line-height: 1.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: pink;
+}
+
+a {
+  color: #bef;
+}
