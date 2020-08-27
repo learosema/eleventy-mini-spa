@@ -25,8 +25,9 @@
     "serve:html": "eleventy --serve",
     "prebuild": "rm -rf dist",
     "build": "npm run build:css -s && npm run build:html -s",
-    "predeploy": "npm run build",
+    "predeploy": "mv src/_data/site.json src/_data/site.dev.json && mv src/_data/site.deployed.json src/_data/site.json && npm run build",
     "deploy": "touch dist/.nojekyll && gh-pages -d dist",
+    "postdeploy": "mv src/_data/site.json src/_data/site.deployed.json && mv src/_data/site.dev.json src/_data/site.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
