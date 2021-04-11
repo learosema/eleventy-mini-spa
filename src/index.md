@@ -7,4 +7,4 @@ layout: layouts/page.html
 
 This is a Single Page Application on top of a statically generated site with a progressive enhancement approach.
 
-The SPA functionality is implemented in under 1kb of JS. :)
+The SPA functionality is implemented in about 2kb of JS. :)
