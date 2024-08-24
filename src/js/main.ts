@@ -18,6 +18,9 @@ async function load(href: string, pushState: boolean) {
     const docTitle = doc.querySelector('title')?.textContent || '';
     container.innerHTML = docMain?.innerHTML || '';
     document.title = docTitle;
+    if (pushState) {
+      history.pushState({}, docTitle, href);
+    }
     const h1 = document.querySelector('h1'); 
     if (h1) {
       h1.setAttribute('tabindex', '-1');
