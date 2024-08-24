@@ -7,16 +7,17 @@
     <title>{{ title }}
       –
       {{ site.name }}</title>
-    <style>
-      {% include "css/global.css" %}
-    </style>
+    <link rel="stylesheet" href="{{ site.url }}/css/styles.css"/>
     {% block head %}{% endblock %}
   </head>
   <body>
-    {% include "partials/navigation.html" %}
+    {% include "navigation.njk" %}
     <main>
       {% block content %}{% endblock %}
     </main>
-    <script src="{{ site.url }}/js/mini-spa.js"></script>
+    {% block scripts %}
+
+    {% endblock %}
+    
   </body>
 </html>

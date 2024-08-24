@@ -1,10 +1,9 @@
 ---
-title: About
-layout: layouts/page.html
+title: About me
+layout: page
 ---
 
-# About
+# About me
 
-Hi, I'm Lea. I'm a Cutie.
+Hi, I'm Lea (she/her) I'm a Cutie working in tech, based in the Hamburg area.
 
-![Kitten](https://placekitten.com/256/256)

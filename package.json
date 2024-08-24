@@ -1,36 +1,22 @@
 {
-  "name": "mini-spa",
+  "name": "eleventy-mini-spa",
   "version": "1.0.0",
-  "description": "",
-  "main": ".eleventy.js",
-  "dependencies": {},
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "concurrently": "^6.0.1",
-    "gh-pages": "^3.1.0",
-    "postcss": "^8.2.10",
-    "postcss-cli": "^8.3.1",
-    "postcss-preset-env": "^6.7.0",
-    "rollup": "^2.45.1",
-    "sass": "^1.32.8"
-  },
+  "description": "I was wondering how to add SPA functionality to a statically generated site that just uses HTML,CSS and no JS.",
+  "main": "eleventy.config.js",
   "scripts": {
-    "start": "concurrently 'npm:serve:html' 'npm:watch:css'",
-    "build:css": "sass src/scss/global.scss .tmp/css/global.css && postcss .tmp/css/**/*.css --dir src/_includes/css",
-    "postbuild:css": "rm -rf .tmp",
-    "prewatch:css": "sass src/scss/global.scss .tmp/css/global.css && postcss .tmp/css/**/*.css --dir src/_includes/css",
-    "watch:css": "concurrently 'sass src/scss/:.tmp/css/ --watch' 'postcss .tmp/css/**/*.css --dir src/_includes/css --watch'",
-    "postwatch:css": "rm -rf .tmp",
-    "build:html": "eleventy",
-    "serve:html": "eleventy --serve",
-    "prebuild": "rm -rf dist",
-    "build": "npm run build:css -s && npm run build:html -s",
-    "predeploy": "mv src/_data/site.json src/_data/site.dev.json && mv src/_data/site.deployed.json src/_data/site.json && npm run build",
-    "deploy": "touch dist/.nojekyll && gh-pages -d dist",
-    "postdeploy": "mv src/_data/site.json src/_data/site.deployed.json && mv src/_data/site.dev.json src/_data/site.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "eleventy --serve"
   },
+  "browserslist": [
+    "last 2 version",
+    "not dead"
+  ],
   "keywords": [],
-  "author": "Lea Rosema",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "browserslist": "^4.23.3",
+    "esbuild": "^0.23.1",
+    "lightningcss": "^1.26.0"
+  }
 }

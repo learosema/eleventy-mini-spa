@@ -1,0 +1,9 @@
+{% extends "./base.njk" %}
+
+{% block content %}
+  <article>{{ content | safe }}</article>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ site.url }}/js/main.js"></script>
+{% endblock %}

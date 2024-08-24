@@ -1,8 +1,8 @@
 ---
 title: Contact
-layout: layouts/page.html
+layout: page
 ---
 
 # Contact
 
-You can contact me via twitter: [@terabaud](https://twitter.com/terabaud)
+Find me in the fediverse at <https://lea.lgbt/@lea>.
