@@ -17,6 +17,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "browserslist": "^4.23.3",
+    "cross-env": "^7.0.3",
     "esbuild": "^0.23.1",
     "lightningcss": "^1.26.0"
   }
