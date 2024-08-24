@@ -4,7 +4,8 @@
   "description": "I was wondering how to add SPA functionality to a statically generated site that just uses HTML,CSS and no JS.",
   "main": "eleventy.config.js",
   "scripts": {
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "build": "cross-env NODE_ENV=production eleventy"
   },
   "browserslist": [
     "last 2 version",
